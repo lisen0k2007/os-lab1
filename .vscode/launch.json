@@ -9,7 +9,11 @@
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
       "preLaunchTask": "build",
-      "miDebuggerPath": "/usr/bin/gdb"
+      "linux": { "miDebuggerPath": "/usr/bin/gdb" },
+      "windows": {
+        "program": "${workspaceFolder}/build/hello.exe",
+        "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe"
+      }
     }
   ]
 }

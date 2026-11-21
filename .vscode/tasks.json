@@ -5,7 +5,11 @@
       "label": "configure",
       "type": "shell",
       "command": "cmake",
-      "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"]
+      "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+      "windows": {
+        "args": ["-S", ".", "-B", "build", "-G", "MinGW Makefiles",
+                 "-DCMAKE_BUILD_TYPE=Debug"]
+      }
     },
     {
       "label": "build",
